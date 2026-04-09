@@ -1,0 +1,8 @@
+{
+  "name": "PowerShell Web Download Activity",
+  "search": "index=main sourcetype=WinEventLog EventCode=4104 (Net.WebClient OR DownloadFile OR Invoke-WebRequest)",
+  "description": "PowerShell vasitəsilə internetdən fayl endirmə cəhdlərini izləyir.",
+  "severity": "high",
+  "cron_schedule": "*/10 * * * *",
+  "is_visible": true
+}

@@ -24,7 +24,7 @@ def deploy_rule(rule_file):
         "output_mode": "json"
     }
     
-    response = requests.post(endpoint, headers=headers, data=payload, verify=False)
+    response = requests.post(endpoint, headers=headers, data=payload, verify=False, timeout=10)
     if response.status_code == 201:
         print(f"Uğurlu: {rule_data['name']} yaradıldı!")
     else:

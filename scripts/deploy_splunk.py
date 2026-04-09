@@ -9,8 +9,9 @@ def deploy_rule(rule_file):
     with open(rule_file, 'r') as f:
         rule_data = json.load(f)
     
-    endpoint = f"{SPLUNK_URL}/servicesNS/admin/search/saved/searches?output_mode=json"
-    headers = {"Authorization": f"Bearer {SPLUNK_TOKEN}"}
+# 'admin' yerinə 'nobody' yazmaqla qaydanın hər kəs üçün yaradılmasını təmin edirik
+endpoint = f"{SPLUNK_URL}/servicesNS/nobody/search/saved/searches?output_mode=json"
+headers = {"Authorization": f"Bearer {SPLUNK_TOKEN}"}
     
     payload = {
         "name": rule_data['name'],

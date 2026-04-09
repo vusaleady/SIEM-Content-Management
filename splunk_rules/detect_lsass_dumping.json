@@ -1,1 +1,9 @@
-
+{
+  "name": "Suspicious LSASS Memory Dump Process",
+  "search": "index=main sourcetype=\"WinEventLog:Security\" EventCode=4688 (Process_Name=\"*procdump.exe\" OR Process_Name=\"*comsvcs.dll\") CommandLine=\"*lsass*\"",
+  "description": "Təcavüzkarların şifrələri əldə etmək üçün LSASS prosesinin yaddaşını dump etmək cəhdini təsbit edir (MITRE T1003.001).",
+  "severity": "critical",
+  "cron_schedule": "*/5 * * * *",
+  "is_visible": true,
+  "drilldown_enabled": true
+}

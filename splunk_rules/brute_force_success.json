@@ -1,1 +1,8 @@
-
+{
+  "name": "Successful Login After Brute Force",
+  "search": "index=main sourcetype=WinEventLog EventCode=4625 | stats count as failure_count by TargetUserName, IpAddress | where failure_count > 5 | join TargetUserName [ search index=main sourcetype=WinEventLog EventCode=4624 ]",
+  "description": "5-dən çox uğursuz cəhddən sonra baş verən uğurlu girişi təsbit edir.",
+  "severity": "critical",
+  "cron_schedule": "*/5 * * * *",
+  "is_visible": true
+}

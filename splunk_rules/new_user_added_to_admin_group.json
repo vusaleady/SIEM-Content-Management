@@ -1,0 +1,7 @@
+{
+  "rule_name": "Admin Group Modification",
+  "mitre_id": "T1078.002",
+  "severity": "High",
+  "description": "Admin qrupuna yeni istifadəçi əlavə edildikdə işə düşür.",
+  "search_query": "index=windows EventCode=4728 OR EventCode=4732 Group_Name=\"*Administrators*\""
+}

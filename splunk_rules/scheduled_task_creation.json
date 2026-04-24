@@ -1,0 +1,7 @@
+{
+  "rule_name": "Scheduled Task Created",
+  "mitre_id": "T1053.005",
+  "severity": "Medium",
+  "description": "Sistemdə yeni planlaşdırılmış tapşırıq yaradılmasını aşkarlayır.",
+  "search_query": "index=windows EventCode=4698"
+}
